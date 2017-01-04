@@ -10,8 +10,91 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.yqd.yiqi.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bar">
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:orientation="horizontal"
+        android:gravity="center">
+        <LinearLayout
+            android:id="@+id/shouye"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_shouye"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/shouye"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/main_tab_home_selected"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/yezhushuo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_yezhushuo"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/yezhushuo"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/main_tab_community_normal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/xiaoxi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_xiaoxi"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/xiaoxi"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/main_tab_msg_normal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_wode"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/wode"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/main_tab_my_normal"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 </RelativeLayout>
