@@ -11,6 +11,7 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.finesdk.imageload.ImageLoader;
 import com.finesdk.util.common.LogUtil;
 import com.yqd.yiqi.R;
+import com.yqd.yiqi.adapter.ViewHolder.ViewHolder;
 import com.yqd.yiqi.entity.EssenceEntity;
 
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.List;
  * Created by Administrator on 2017/1/6.
  */
 
-public class OwerAdaterList extends BaseAdapter {
+public class OwerAdaterList extends BaseAdapter implements View.OnClickListener {
     private Context context;
     private List<EssenceEntity.DataBean> datas;
     private String type=null;
@@ -103,17 +104,11 @@ public class OwerAdaterList extends BaseAdapter {
        imageLoader.disPlayImage(viewHolder.image_title,datas.get(position).getAvtUrl());
         return convertView;
     }
-    class ViewHolder{
-        SimpleDraweeView image_title;
-        TextView tv_name;
-        TextView tv_attribute;
-        TextView tv_title;
-        TextView tv_type;
-        SimpleDraweeView image_main;
-        TextView tv_from;
-        TextView tv_time;
-        ImageView image_zan;
-        TextView tv_msg;
-        ImageView image_share;
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            
+        }
     }
 }
