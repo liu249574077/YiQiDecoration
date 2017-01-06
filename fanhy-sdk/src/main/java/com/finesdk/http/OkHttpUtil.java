@@ -50,7 +50,6 @@ public class OkHttpUtil {
     }
     private void deliveryResult(final ResultCallback callback, Request request) {
         mOkHttpClient.newCall(request).enqueue(new Callback() {
-
             @Override
             public void onFailure(Call call, IOException e) {
                 sendFailCallback(callback, e);

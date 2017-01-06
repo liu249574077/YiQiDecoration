@@ -1,31 +1,52 @@
 package com.yqd.yiqi.adapter;
 
-import android.view.View;
+import android.content.Context;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import com.finesdk.adapter.BaseListAdpter;
+import com.yqd.yiqi.Fragment_home_bean;
+import com.yqd.yiqi.R;
+
+import java.util.List;
 
 /**
  * Created by admin on 2017/1/4.
  */
 
-public class Fragment_home_adapter extends BaseAdapter {
-    @Override
-    public int getCount() {
-        return 0;
+public class Fragment_home_adapter extends BaseListAdpter<Fragment_home_bean,Fragment_home_adapter.MyViewHolder> {
+
+
+    public Fragment_home_adapter(Context context) {
+        super(context);
+    }
+
+    public Fragment_home_adapter(List<Fragment_home_bean> fragment_home_been, Context context) {
+        super(fragment_home_been, context);
     }
 
     @Override
-    public Object getItem(int i) {
-        return null;
+    public int getResourceId() {
+        return R.layout.item_fragment_home_adapter;
     }
 
     @Override
-    public long getItemId(int i) {
-        return 0;
+    public MyViewHolder onCreateViewHolder(ViewGroup parent) {
+        MyViewHolder holder = new MyViewHolder();
+        return holder;
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        return null;
+    public void onBindViewHolder(MyViewHolder holder, Fragment_home_bean fragment_home_bean, int position) {
+        holder.tv = findViewByIdNoCast(R.id.item_fragment_home_tv);
+        holder.tv.setText(fragment_home_bean.getTv());
+    }
+
+    class MyViewHolder extends BaseListAdpter.ViewHolder {
+        TextView tv;
     }
 }
+
+
+
+
