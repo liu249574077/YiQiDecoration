@@ -57,9 +57,9 @@ public class Fragment_home extends BaseFragment {
         OkHttpUtil.post("http://bbs.17house.com/motnt/index.php?a=appindex&c=index&id=1218226&uuid=86305803367590&pageSize=10&uid=1633055&m=misc&type=3&page=1&haspermission=yes&model=android&sessionToken=6U49kCYKE260RqvPqEdFsBGskNQStKhm&app_version=android_com.aiyiqi.galaxy_1.1",new OkHttpUtil.ResultCallback() {
             @Override
             public void onSuccess(Object response) {
-                TitleADBean bean = (TitleADBean)response;
-                TitleAD titleAD = (TitleAD) bean.getData();
-                LogUtil.e("首页数据"+titleAD);
+//                TitleADBean bean = (TitleADBean)response;
+//                TitleAD titleAD = (TitleAD) bean.getData();
+//                LogUtil.e("首页数据"+titleAD);
             }
 
             @Override

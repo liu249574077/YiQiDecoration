@@ -48,8 +48,10 @@ public class ImageLoader {
         int heigth = 0;
 
         //如果layout里面没有设置宽高就给个默认高度
-        width = mSimpleDraweeView.getWidth();
-        heigth = mSimpleDraweeView.getHeight();
+//        width = mSimpleDraweeView.getWidth();
+//        heigth = mSimpleDraweeView.getHeight();
+        width=mSimpleDraweeView.getHeight();
+        heigth=300;
 
         if (width <= 0) {
             width = DisplayUtil.dip2px(BaseApplication.newInstance().getAppContext(), 40);
@@ -68,5 +70,6 @@ public class ImageLoader {
                 .setOldController(mSimpleDraweeView.getController())
                 .build();
         mSimpleDraweeView.setController(controller);
+
     }
 }

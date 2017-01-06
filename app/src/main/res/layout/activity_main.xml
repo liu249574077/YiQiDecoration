@@ -93,8 +93,6 @@
                 android:drawablePadding="5dp"
                 android:drawableTop="@drawable/main_tab_my_normal"/>
         </LinearLayout>
-
-
     </LinearLayout>
 
 </RelativeLayout>
